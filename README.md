@@ -25,13 +25,6 @@ Here's how the differentiators are being addressed:
 We don't require deep knowledge of the industry standards to get started, just common developer skillsets. 
 * Polyglot Language Support: Enabling the use of many different programming languages. The focus here is to ensure by major capability area a programming language is supported.
 
-# Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to be a multi-faceted healthcare organization with businesses and needs across all healthcare markets. By doing this the team can assist in delivering healthcare centric solutions to the market that will be applicable.
-
-Healthcare Facilities:  MCTN   
-Sending Application:    MMS (Main Medical Software)
-Custom Application:     myEHR
-
 # Platform: Connected Health / iDAAS 
 As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). Connected Health/iDAAS overall objective is to simplify data integration and interoperability needs. By establishing a platform initally this enabled the team to focus on the overall industry needs and work through them and establish capabilities for each. As the capabilities were worked through components have been developed to address these needs. 
 
@@ -80,11 +73,19 @@ It contains the following non Red Hat technologies:
 * Spring Boot
 * Maven 
 
+
+# Practical Implementation: Partnering Organization
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to be a multi-faceted healthcare organization with businesses and needs across all healthcare markets. 
+
+Healthcare Facilities:  MCTN   
+Sending Application:    MMS (Main Medical Software)
+Custom Application:     myEHR
+
 # Other Contributions within Source
 
 While this repository has all the source code needed to run the solution, it also has several additional artifacts within specific  directories that are needed to run the code:
 
-* amq: This directory contains the broker script that can be implemented within the A-MQ area created when you did ./artemis create <amqArea> and you just need to place the broker.xml file from this directory in its <path to A-MQ>/<amqArea>/bin
+* amq: This directory is for the amq based implementation of iDAAS, iDAAS currently is implemented with Kafka. The amq directory contains the broker script that can be implemented within the A-MQ area created when you did ./artemis create <amqArea> and you just need to place the broker.xml file from this directory in its <path to A-MQ>/<amqArea>/bin
 * content-published: This directory is intended to maintain any content published about the platform.
 
 # Building
