@@ -11,16 +11,18 @@ some differentiators for whatever gets built:
 * Open Source Enablement
 * Modern Application Development/Delivery Capabilities
 * Reduce Propritary Skillset(s)
+* Innovative Disruption
 * Deliver Consistentcy
 * Polyglot Language Support
 
 Here's how the differentiators are being addressed:
 
-* Extensibility: The fovus has been on building an extensible platform. The platform is just a series of components that can be connected, extended or new components developed as developers and business teams work together. 
-* Reduce Proprietray Knoweldge: We have removed COTS or black box box software and gone with a very open approach. Spring Boot, Postgres/mariaDB/SQL Server, Red Hat Fuse, Red Hat Process Automation Manager (Business Rules, Workflow and Complex Event Processing), Red Hat A-MQ (soon we are also puttting in AMQ-Streams).
-* Open Source Enablement: Provide the source code of the components to extend as needed. Currently, the code is in Git Hub private repos currently as we work through some processes.
+* Extensibility: The focus has been on building an extensible platform based on need and usage. The platform is just a series of components that can be connected, extended or new components developed as developers and business teams work together. Within the platform it is developed to enable small to large and complex healthcare organizations to leverage this platform. The platform looks at ANY data as by the application, components, facilities, and overall organization associated with EVERY transaction. 
+* Reduce Proprietray Knoweldge: We have removed COTS or black box box software and gone with a very open approach. Our approach leverages the numerous Open Source and upstream Open Source products Red Hat is engaged in. Here are several of the technologies this platform leverages: Spring Boot, Red Hat Fuse, Red Hat Process Automation Manager (Business Rules, Workflow and Complex Event Processing), Red Hat A-MQ Streams (Kafka)  - (we also into an A-MQ release as well).
+* Open Source Enablement: Provide the source code of the components to extend as needed.
 * Modern Application Development/Delivery Capabilities: Where applicable everything is cloud native/container focused. Several of the platform components are based on SpringBoot for easy of deployment and running.
-* Reduce Preprietary Skillsets: Removing COTS centric skillsets.
+* Reduce Preprietary Skillsets: Removing COTS centric skillsets. This platform is about enabling industry best technologies to enable healthcare to build capabilities rapidly. 
+* Disruption: This platform is absolutely designed to enable disruption and enable innovation at the speed of business and technologists.
 * Deliver Consistency: Focus around industry standard design and integration patterns.
 We don't require deep knowledge of the industry standards to get started, just common developer skillsets. 
 * Polyglot Language Support: Enabling the use of many different programming languages. The focus here is to ensure by major capability area a programming language is supported.
@@ -33,10 +35,11 @@ Here is a general visual of how iDAAS fits in and can enable innovation and solv
 <img src="https://github.com/balanscott/iDAAS-Connect-Clinical/blob/development/content/images/iDAAS%20-%20High%20Level%20Solution%20Overview.png/" alt="Healthcare Integration" width="500" height="350" />
 </p>
 
-# Data Enablement: iDAAS Connect Clinical 
-The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences this is no longer a practice that can be tolerated or endured. The solution for data enablement is iDAAS Connect Clinical.
+Here is a specific visual on the iDAAS Platform and all its components:
 
-As you look at this repository please keep in mind it is the code that powers the clinically connectivity component of the iDAAS Platform, iDAAS Connect Clinical. It has been designed and developed to support Clinical Integration standards based data exchanges and perform an enterprise clinical integration pattern for routing of data. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). We are actively working on adding in FHIR R4 support. 
+
+# Data Enablement: iDAAS Connect Clinical Industry Standards
+The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
 
 # Industry Standard Support
 As mentioned above we discussed the industry Standard support. This section covers the clinical integration standards and detailed links that are support by the implementation of the platform:
@@ -64,7 +67,7 @@ The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usag
 
 * Red Hat Fuse
 * Red Hat Process Automation Manager
-* Red Hat A-MQ
+* Red Hat A-MQ Streams
 * Red Hat OpenShift
 
 It contains the following non Red Hat technologies:
@@ -73,9 +76,8 @@ It contains the following non Red Hat technologies:
 * Spring Boot
 * Maven 
 
-
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to be a multi-faceted healthcare organization with businesses and needs across all healthcare markets. 
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to be a multi-faceted healthcare organization with businesses and needs across all healthcare markets. This way, ALL the source code/demonstrations and documentation focus on specific healthcare market needs.
 
 Healthcare Facilities:  MCTN   
 Sending Application:    MMS (Main Medical Software)
@@ -88,13 +90,11 @@ While this repository has all the source code needed to run the solution, it als
 * amq: This directory is for the amq based implementation of iDAAS, iDAAS currently is implemented with Kafka. The amq directory contains the broker script that can be implemented within the A-MQ area created when you did ./artemis create <amqArea> and you just need to place the broker.xml file from this directory in its <path to A-MQ>/<amqArea>/bin
 * content-published: This directory is intended to maintain any content published about the platform.
 
-# Building
+# Building and Running
 
 This code can be built with the following command:
 
 mvn clean install
-
-# Running
 
 
 # Containers Based - Openshift (where possible) 
@@ -128,12 +128,4 @@ oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/
 Now when you use "Add to Project" button in the OpenShift console, you should see a template for this quickstart.
 
 # Other Related GitHub Repositories for Connected Health / iDAAS Platform Components
-As mentioned above iDAAS is a platform and is built in a very modular manner. Below is a detailed set of links to all the other iDAAS GitHub repositories and their purpose. 
-
-| iDAAS Platform Component | iDAAS Repository Link | Description |
-| ------------------------ | --------------------- | ----------- |
-| iDAAS Event Builder      | https://github.com/balanscott/iDAAS-EventBuilder  | All the Parsers and Pojos used by the iDAAS platform, it can be referenced in any other iDAAS Platform component |
-| iDAAS Data Integration Event Builder  | https://github.com/balanscott/iDAAS-DataIntgrtn-EventBuilder | Data Integration framework to handle various forms of streaming data and invoke iDAAS Event Builder to output healthcare events |
-| iDAAS Data DataHub | https://github.com/balanscott/iDAAS-Data-DataHub | Specific tier for ensuring end users can see transactions the platform has processed and reports. This is comprised on a scalable integration project and also includes the DDL for Postgres and SQL Server |
-| iDAAS Visual UI | https://github.com/balanscott/iDAAS-Visual-UI | Visual Tier for representing the platforms data and providing insight and related capabilities |
-| iDAAS Message Simulator | https://github.com/balanscott/MessageSimulator | This is currently a very small .Net Core console application. The intent is to grown and extend it to a feature rich component set for all iDAAS message testing needs |
+As mentioned above iDAAS is a platform and is built in a very modular manner. We will be releasing other public Git Hub repositories that will enable additional extensibility.
