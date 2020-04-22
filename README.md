@@ -60,31 +60,36 @@ General Capabilities that are implemented in the platform:
 # Development IDE
 The iDAAS (Intelligent Data as a Service) Clinical platform was initially developed using Eclipse. While this can still be used to update code, the team wanted to share its has transitioned to the following Development IDE and plugins: 
 
-* IntelliJ Community IDE
-* Apache Camel Plugin
-* Big Data Tools Plugin
-* Kubernetes Plugin
+* IntelliJ Community IDE with the following plugins: Apache Camel Plugin, Big Data Tools Plugin nd Kubernetes Plugin
 
 # iDAAS Technologies
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
-* Red Hat Fuse
-* Red Hat Process Automation Manager
-* Red Hat A-MQ Streams
-* Red Hat OpenShift
+| Capabilty Area | Upstream Release | Red Hat Release |
+| -------------- | ---------------- | --------------- |
+| Integration    | Apache Camel     | Red Hat Fuse   |
+| Business Rules | Drools           | Red Hat Decision Mgr |
+| Data Streaming | Apache Kafka     | Red Hat A-MQ Streams |
+| Containers     | K8               | OpenShift            |
 
 It contains the following non Red Hat technologies:
 
-* Java
-* Spring Boot
-* Maven 
+| Capabilty Area | Technologies |
+| -------------- | ------------ |
+| RDBMS    | SQL Server, Postgres or MariaDB     |
+| Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
+
 
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to be a multi-faceted healthcare organization with businesses and needs across all healthcare markets. This way, ALL the source code/demonstrations and documentation focus on specific healthcare market needs.
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. 
 
-Healthcare Facilities:  MCTN   
-Sending Application:    MMS (Main Medical Software)
-Custom Application:     myEHR
+Here are some specific details for all the demonstrations developed:
+
+| Item | Technologies |
+| ---- | ------------ |
+| Healthcare Facilities |  MCTN |   
+| Sending Application(s)|  MMS (Main Medical Software)/Care Kiosk UI |
+| Custom Integrated Application | myEHR
 
 # Other Contributions within Source
 
