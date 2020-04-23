@@ -4,7 +4,7 @@ For decades across the various markets within healthcare (clinical, financial, p
 As discussed in the introduction integration has been a challenge for decades in each market within healthcare. Within healthcare the challenges have been driven by many different factors, here are just a few common ones: industry standards (HL7) that aren't constrained enough, Clincal software vendor market constraints, COTS integration vendor lock-in, and government mandates that they cannot directly support without third party vendor engagement.
 
 As the Red Hat healthcare team thought about potential ways to help the clinical integration space, they came up 
-some differentiators for whatever gets built:
+some differentiators for whatever platform would be built:
 
 * Extenibility
 * Reduce Proprietary Knowledge
@@ -28,7 +28,14 @@ We don't require deep knowledge of the industry standards to get started, just c
 * Polyglot Language Support: Enabling the use of many different programming languages. The focus here is to ensure by major capability area a programming language is supported.
 
 # Platform: Connected Health / iDAAS 
-As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). Connected Health/iDAAS overall objective is to simplify data integration and interoperability needs. By establishing a platform initally this enabled the team to focus on the overall industry needs and work through them and establish capabilities for each. As the capabilities were worked through components have been developed to address these needs. 
+As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). As we have above we wanted to focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. In this section we want to cover the specific components within iDAAS that are helping us build forward on these differentiators. As you are reading through this it is important to ensure understanding that iDAAS is a platform that is developed as a set of components working with industry leading technologies that enable us a broad range of capabilities, it is not merely a code base written in a programming language. The reason we have followed this pattern is that we can leverage a large set community to ensure we can address potential issues and concerns quickly with a large technical community. Let's do a walk through of the capability areas within iDAAS and the technologies that enable and power it.
+* Integration: Ties back to Red Hat’s Fuse and its upstream Apache Camel community. This technology is backed by one of the most active communities and continues to grow and expand this technology for well over a decade. As part of its commitment there are thousands of implementations of all sizes, types and scale levels in numerous industries with some of them growing to support 1 billion daily transactions. As part of its growth are the hundred plus connectors that it natively supports, this will be very beneficial for Red Hat’s healthcare team as the platform looks to grow and expand based on feedback and demand. 
+* Business Rules: This capability is supported by Decision Manager and the upstream Drools community. This technology is very largely adopted and implemented throughout the community. Drools has a very large footprint in organizations all over the world delivering expert based solutions and capabilities.
+* Data Streaming: A key effort for us is enabling and building a high end data streaming and distribution platform. This capability is being supported by AMQ-Streams and the upstream Kafka community. We are also looking at future implementations with other distributed queuing technologies. As a side note, within the codebase there is a codebase built atop Apache-MQ; however, we maintain the code ONLY for resources that would rather leverage that technology.
+* APIs: we have developed all the APIs leveraging .Net Core v3. This will be in two seperate efforts, one is for the platform and one will be for the data tier.
+* UX /User Interfaces: The UX experience for the platform is currently driven by .Net Core v3 based assets and a very modern, responsive application design. These applications are best run on the industry leading OpenShift platform for scale. The security model for these capabilities is currently being worked through to ensure the platform is demonstrable, the focus is on showcasing security and enabling the adopters to tie it to LDAP/AD or SAML based systems for the highest level of security.
+* Data: We currently are moving to support DDLs for SQL Server, Maria DB (MySQL) and Postgres. This is because there is wide adoption of these within healthcare. The first few implementations with be SQL Server DDL centric as well finalize data model validation. We also intend to expand towards NoSQL standards quickly as we continue to implement new features.
+Connected Health/iDAAS overall objective is to simplify data integration and interoperability needs. By establishing a platform initally this enabled the team to focus on the overall industry needs and work through them and establish capabilities for each. As the capabilities were worked through components have been developed to address these needs. 
 
 Here is a general visual of how iDAAS fits in and can enable innovation and solving the problem of integration innovation in the clinical space:
 <p align="center" >
@@ -81,7 +88,7 @@ It contains the following non Red Hat technologies:
 
 
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. 
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building, 
 
 Here are some specific details for all the demonstrations developed:
 
