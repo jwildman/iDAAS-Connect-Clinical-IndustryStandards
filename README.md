@@ -28,7 +28,18 @@ We don't require deep knowledge of the industry standards to get started, just c
 * Polyglot Language Support: Enabling the use of many different programming languages. The focus here is to ensure by major capability area a programming language is supported.
 
 # Platform: Connected Health / iDAAS 
-As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). As we have above we wanted to focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. In this section we want to cover the specific components within iDAAS that are helping us build forward on these differentiators. As you are reading through this it is important to ensure understanding that iDAAS is a platform that is developed as a set of components working with industry leading technologies that enable us a broad range of capabilities, it is not merely a code base written in a programming language. The reason we have followed this pattern is that we can leverage a large set community to ensure we can address potential issues and concerns quickly with a large technical community. Let's do a walk through of the capability areas within iDAAS and the technologies that enable and power it.
+As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). As we have above we wanted to focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. In this section we want to cover the specific components within iDAAS that are helping us build forward on these differentiators. As you are reading through this it is important to ensure understanding that iDAAS is a platform that is developed as a set of components working with industry leading technologies that enable us a broad range of capabilities, it is not merely a code base written in a programming language. The reason we have followed this pattern is that we can leverage a large set community to ensure we can address potential issues and concerns quickly with a large technical community. Let's do a walk through of the capability areas within iDAAS.
+
+Here are some of the capabilities, the five R’s:
+
+* Receive: receive data from various formats. We have branded this capability iDAAS Connect. From receiving data we focus on industry standards and then third party connectivity. Industry standards support include HL7 v2, FHIR, and EDI Claims. There are potential future plans for  NCPDP and HL7 v3 message support being discussed. From a third party connectivity perspective we focus on building an on-ramp for data to be leveraged within iDAAS for over 75 common protocols like JDBC data sources, File, FTP, SFTP, FTPS, APIs, WSDL, AS400,  Mongo, Kafka, numerous cloud platforms  and many more.
+* Route: enable data to be routed to many sources. For this capability we have focused on building out several specific components such as healthcare event builder (both code and integration) to form the intelligent healthcare data router. 
+* Run:  This is one of the most exciting capabilities we are enabling. This is done through our DREAM component. DREAM, Data Realtime Exchange Automated Management, is all about driving change in the healthcare community and building out a value exchange that can be used by anyone implementing iDAAS to add new capabilities in a low latency and very low risk. You would build a component that has the capability of acting on streaming information and being invoked in a real-time manner. These activities could include areas like event population and building, business rules enablement, third party application integration, AI, ML,  dynamic mapping of data sources, cross mapping codes and many other potential examples.
+* Resolve: Enable error handling and insight to resolve potential processing issues. Also, the need to replay messages for new needs.
+* Research: Enable access to information in a reusable auditable manner. This includes our ability to enable real time clinical information to be tagged as its passing through the platform.
+
+Here are the technologies that drive the capabilities:
+
 * Integration: Ties back to Red Hat’s Fuse and its upstream Apache Camel community. This technology is backed by one of the most active communities and continues to grow and expand this technology for well over a decade. As part of its commitment there are thousands of implementations of all sizes, types and scale levels in numerous industries with some of them growing to support 1 billion daily transactions. As part of its growth are the hundred plus connectors that it natively supports, this will be very beneficial for Red Hat’s healthcare team as the platform looks to grow and expand based on feedback and demand. 
 * Business Rules: This capability is supported by Decision Manager and the upstream Drools community. This technology is very largely adopted and implemented throughout the community. Drools has a very large footprint in organizations all over the world delivering expert based solutions and capabilities.
 * Data Streaming: A key effort for us is enabling and building a high end data streaming and distribution platform. This capability is being supported by AMQ-Streams and the upstream Kafka community. We are also looking at future implementations with other distributed queuing technologies. As a side note, within the codebase there is a codebase built atop Apache-MQ; however, we maintain the code ONLY for resources that would rather leverage that technology.
@@ -57,8 +68,8 @@ As mentioned above we discussed the industry Standard support. This section cove
 * [HL7 v2 Message Receivers](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185 "HL7 v2 Message Receivers") - Support for ADT, ORM, ORU, RDE, SCH, MFN, MDM and VXU message types. Connected Clinical does not care about specific HL7 version, its has been tested from version 2.1 through 2.8.
 * [FHIR Clinical Receivers](https://www.hl7.org/fhir/ "HL7 FHIR") - Support for FHIR Clinical is currently being implemented. The platform will focus on delivery R4 (4.01) support to align with the CMS guidance on Interoperability and Patient Access. 
 
-# General Capabilities
-General Capabilities that are implemented in the platform:
+# Key Differentiators 
+Then platform has some key differentiators that are implemented in the platform:
 
 * [Healthcare Streaming Event Support](https://www.redhat.com/en/technologies/jboss-middleware/amq "Streaming Technologies") - Support decoupled and/or streaming architecture.
 * Healthcare Event Support - Support for building, extending and enabling healthcare event processing.
@@ -67,7 +78,7 @@ General Capabilities that are implemented in the platform:
 # Development IDE
 The iDAAS (Intelligent Data as a Service) Clinical platform was initially developed using Eclipse. While this can still be used to update code, the team wanted to share its has transitioned to the following Development IDE and plugins: 
 
-* IntelliJ Community IDE with the following plugins: Apache Camel Plugin, Big Data Tools Plugin nd Kubernetes Plugin
+* IntelliJ Community IDE with the following plugins: Apache Camel Plugin, Big Data Tools Plugin and Kubernetes Plugin
 
 # iDAAS Technologies
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
