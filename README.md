@@ -50,14 +50,16 @@ Connected Health/iDAAS overall objective is to simplify data integration and int
 
 Here is a general visual of how iDAAS fits in and can enable innovation and solving the problem of integration innovation in the clinical space:
 <p align="center" >
-<img src="https://github.com/balanscott/iDAAS-Connect-Clinical/blob/development/content/images/iDAAS%20-%20High%20Level%20Solution%20Overview.png/" alt="Healthcare Integration" width="500" height="350" />
+<img src="https://github.com/redhat-healthcare-chiefarchitect/iDAAS-Connect-Clinical-IndustryStds/blob/development/content/images/iDAAS%20Platform%20-%20iDAAS%20Connect%20and%20Vendor%20FHIR%20Modules.png" alt="Healthcare Integration" width="500" height="350" />
 </p>
 
-Here is a specific visual on the iDAAS Platform and all its specific components:
+Here is a visual on the iDAAS Platform and all its specific components:
 <p align="center" >
 <img src="https://github.com/redhat-healthcare-chiefarchitect/iDAAS-Connect-Clinical-IndustryStds/blob/development/content/images/iDAASPlatform-Tier_High%20Level.png/" alt="iDAAS Component Design" 
 width="600" height="600" />
 </p>
+
+
 
 # Data Enablement: iDAAS Connect Clinical Industry Standards
 The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
