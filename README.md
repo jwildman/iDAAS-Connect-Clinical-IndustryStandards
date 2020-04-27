@@ -125,6 +125,10 @@ This code can be built with the following command:
 
 mvn clean install
 
+After building and then running the solution, implementors might want to test. We have included industry samples for everyone to leverage.
+
+Within the src/test/data there are two directories test-hl7 and test-fhir.
+
 # Containers Based - Openshift (where possible) 
 It is assumed that:
 
