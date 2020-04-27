@@ -101,7 +101,7 @@ It contains the following non Red Hat technologies:
 
 
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building, 
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. While Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing needs.
 
 Here are some specific details for all the demonstrations developed:
 
@@ -109,21 +109,20 @@ Here are some specific details for all the demonstrations developed:
 | ---- | ------------ |
 | Healthcare Facilities |  MCTN |   
 | Sending Application(s)|  MMS (Main Medical Software)/Care Kiosk UI |
-| Custom Integrated Application | myEHR
+| Custom Integrated Application | myEHR |
 
 # Other Contributions within Source
 
 While this repository has all the source code needed to run the solution, it also has several additional artifacts within specific  directories that are needed to run the code:
 
-* amq: This directory is for the amq based implementation of iDAAS, iDAAS currently is implemented with Kafka. The amq directory contains the broker script that can be implemented within the A-MQ area created when you did ./artemis create <amqArea> and you just need to place the broker.xml file from this directory in its <path to A-MQ>/<amqArea>/bin
-* content-published: This directory is intended to maintain any content published about the platform.
+* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the content or site to help ensure everyone has all the available materials.
+* platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. These scripts cover A-MQ and Kafka. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
 
 # Building and Running
 
 This code can be built with the following command:
 
 mvn clean install
-
 
 # Containers Based - Openshift (where possible) 
 It is assumed that:
