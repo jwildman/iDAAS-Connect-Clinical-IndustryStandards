@@ -115,7 +115,8 @@ Here are some specific details for all the demonstrations developed:
 
 While this repository has all the source code needed to run the solution, it also has several additional artifacts within specific  directories that are needed to run the code:
 
-* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the content or site to help ensure everyone has all the available materials.
+* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the 
+content or site to help ensure everyone has all the available materials.
 * platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. These scripts cover A-MQ and Kafka. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
 
 # Building and Running
